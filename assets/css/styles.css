@@ -242,7 +242,7 @@ img {
   height: auto;
   width: 125px;
   margin-bottom: 4px;
-  margin-right: 80px;
+  margin-right: 45px;
   color: #1a2a3a;
 }
 
@@ -286,6 +286,47 @@ img {
     height: 20px;
     width: 1px;
     background-color: #e0e0e0;
+}
+
+/* Language Button Styling */
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid #1a2a3a;
+    color: #1a2a3a;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.lang-btn:hover {
+    background-color: #1a2a3a;
+    color: white;
+}
+
+/* Active state for when French is selected */
+.lang-btn.active-lang {
+    background-color: #1a2a3a;
+    color: white;
+}
+
+/* HIDE Google Translate Top Banner and Tooltips */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+} 
+body {
+    top: 0px !important; 
+}
+.goog-tooltip {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Desktop/Tablet Navigation */
@@ -1621,6 +1662,177 @@ footer {
     border-top: 1px solid #343a40;
 }
 
+/* ==========================================================================
+   TABLET & DESKTOP GRID LAYOUT FIXES (ALL TABS)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    
+    /* 1. Grid Container Setup */
+    /* Ensure dividers are hidden so they don't break the grid */
+    .featured-content-section.active > .divider,
+    .opinion-grid-container > .divider {
+        display: none !important;
+    }
+
+    .featured-content-section.active,
+    .opinion-grid-container {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-rows: auto auto !important;
+        gap: 15px !important; /* Thin spacing */
+        margin-bottom: 40px;
+    }
+
+    /* 2. Card Styling (Rectangular, Bordered, No Shadow) */
+    .featured-article-card,
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        box-shadow: none !important;
+        overflow: hidden;
+    }
+
+    /* 3. Image Styling (Wraps to borders) */
+    .featured-article-card img,
+    .article-card img {
+        width: 100%;
+        height: 180px; /* Fixed height */
+        object-fit: cover;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        display: block;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* 4. Text Content Padding */
+    .featured-article, 
+    .article-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .featured-article-content,
+    .article-content-wrapper {
+        padding: 15px; 
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .featured-article-meta, .article-meta {
+        padding: 0 0 10px 0 !important;
+        margin: 0 !important;
+    }
+
+    /* --- TRENDING SECTION PLACEMENT (ALL TABS) --- */
+
+    /* Left Column (Top): Article 1 */
+    .featured-content-section .featured-article-card:nth-of-type(1) {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    
+    /* Left Column (Bottom): Article 2 */
+    .featured-content-section .featured-article-card:nth-of-type(2) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    /* Right Column (Top): Sponsored Ad */
+    .featured-content-section .featured-article-card:nth-of-type(3) {
+        grid-column: 3 / 5;
+        grid-row: 1;
+        background-color: #f9f9f9;
+        border: 1px solid #f0f0f0;
+    }
+
+    /* Right Column (Bottom Left): Article 3 */
+    .featured-content-section .featured-article-card:nth-of-type(4) {
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+
+    /* Right Column (Bottom Right): Article 4 */
+    .featured-content-section .featured-article-card:nth-of-type(5) {
+        grid-column: 4 / 5;
+        grid-row: 2;
+    }
+
+    /* Visual Adjustments for Small Cards (Bottom Right) */
+    .featured-content-section .featured-article-card:nth-of-type(4) img,
+    .featured-content-section .featured-article-card:nth-of-type(5) img {
+        height: 110px; /* Smaller image height */
+    }
+    .featured-content-section .featured-article-card:nth-of-type(4) .featured-article-title,
+    .featured-content-section .featured-article-card:nth-of-type(5) .featured-article-title {
+        font-size: 1rem; /* Smaller font */
+    }
+    .featured-content-section .featured-article-card:nth-of-type(4) .featured-article-excerpt,
+    .featured-content-section .featured-article-card:nth-of-type(5) .featured-article-excerpt {
+        /*display: none; /* Hide excerpt to fit */
+    }
+
+    /* --- OPINION SECTION PLACEMENT --- */
+
+    /* Left Column (Big Card): Spans 2 rows */
+    .opinion-grid-container .article-card:nth-of-type(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    
+    /* Center the text vertically for the big opinion card */
+    .opinion-grid-container .article-card:nth-of-type(1) .article-content-wrapper {
+        justify-content: center;
+    }
+    .opinion-grid-container .article-card:nth-of-type(1) .article-title {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    /* Right Column (Top): Sponsored Ad */
+    .opinion-grid-container .article-card:nth-of-type(2) {
+        grid-column: 3 / 5;
+        grid-row: 1;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+    }
+
+    /* Right Column (Bottom Left): Opinion 2 */
+    .opinion-grid-container .article-card:nth-of-type(3) {
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+
+    /* Right Column (Bottom Right): Opinion 3 */
+    .opinion-grid-container .article-card:nth-of-type(4) {
+        grid-column: 4 / 5;
+        grid-row: 2;
+    }
+    
+    /* Ad Specific Styling Corrections */
+    .adsterra-native-featured-wrapper img {
+        margin-bottom: 0 !important;
+        border-radius: 0 !important;
+    }
+    .static-sponsored-meta {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255,255,255,0.9);
+        padding: 2px 8px;
+        border-radius: 4px;
+    }
+}
+
 /* 
    ==========================================================================
    NEWS LISTING PAGE SPECIFIC STYLES
@@ -1761,96 +1973,43 @@ footer {
 }
 
 /* =========================================
-   NATIVE AD INTEGRATION STYLES (UPDATED)
+   NATIVE AD INTEGRATION STYLES
    ========================================= */
 
-/* 1. The Main Container Card */
+/* 1. Modify the card specifically for ads */
 .mobile-latest-news-card.promoted-native-ad {
-    position: relative;
-    padding: 12px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    display: block; /* We handle flex inside the wrapper */
-    min-height: 100px;
-    overflow: hidden; /* Keeps content inside rounded corners */
+    position: relative; /* Allows absolute positioning of the Sponsored tag */
+    padding: 12px;      /* Matches your existing card padding */
+    display: block;     /* Overrides flex to allow the ad script to fill space */
+    min-height: 100px;  /* Prevents layout shift while ad loads */
 }
 
-/* 2. The Sponsored Tag 
-   We position this absolutely to sit exactly where the "Category" tag 
-   sits on your normal news cards. */
+/* 2. Position the 'Sponsored' tag exactly where 'Politics/Economy' usually sits */
 .sponsored-label {
     position: absolute;
-    top: 12px;
-    left: 124px; /* 100px image + 12px padding + 12px margin */
-    z-index: 10;
-    pointer-events: none;
-    background-color: #f0f0f0; /* Matches your category tag bg */
+    top: 12px;          /* Aligns with top padding */
+    left: 124px;        /* 100px (Image width) + 12px (margin) + 12px (padding) */
+    z-index: 10;        /* Ensures it sits on top of the ad script */
+    pointer-events: none; /* Allows clicks to pass through to the ad link */
+    background-color: #e0e0e0; /* Slightly different shade to denote ad */
     color: #555;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 15px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.8); /* Optional: distinct pop */
 }
 
-/* 3. Target the Adsterra Link Wrapper 
-   Adsterra wraps the ad in an <a> tag. We turn this into a Flexbox row. */
-.adsterra-native-wrapper a {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    text-decoration: none !important;
-    width: 100% !important;
+/* 3. Style the Adsterra wrapper to behave well */
+.adsterra-native-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* 4. Force the Adsterra Image to be a Thumbnail */
-.adsterra-native-wrapper img {
-    width: 100px !important;
-    height: 75px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    margin-right: 12px !important;
-    margin-bottom: 0 !important; /* Removes bottom margin defaults */
-    flex-shrink: 0 !important;   /* Prevents image from squishing */
-    display: block !important;
-}
-
-/* 5. Style the Adsterra Title 
-   Adsterra puts the title in a div or span inside the link. */
-.adsterra-native-wrapper a > div, 
-.adsterra-native-wrapper a > span {
-    font-family: 'Georgia', serif !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
-    color: #1a2a3a !important;
-    text-align: left !important;
-    
-    /* Push title down to make room for Sponsored tag */
-    padding-top: 25px !important; 
-    margin: 0 !important;
-}
-
-/* 6. Mobile Responsiveness Adjustments */
+/* 4. Mobile Responsiveness adjustments */
 @media (max-width: 374px) {
-    .mobile-latest-news-card.promoted-native-ad {
-        padding: 10px;
-    }
-    .adsterra-native-wrapper img {
-        width: 80px !important;
-        height: 60px !important;
-        margin-right: 10px !important;
-    }
+    /* Adjust position for very small screens based on your existing media queries */
     .sponsored-label {
-        left: 100px; /* 80px image + 10px padding + 10px margin */
+        left: 100px; /* 80px img + 10px margin + 10px padding */
         top: 10px;
-        font-size: 0.7rem;
-    }
-    .adsterra-native-wrapper a > div, 
-    .adsterra-native-wrapper a > span {
-        padding-top: 20px !important;
-        font-size: 0.9rem !important;
     }
 }
 
