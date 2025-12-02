@@ -56,6 +56,72 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+    
+    /* ==========================================================================
+   GOOGLE TRANSLATE CUSTOM INTEGRATION
+   ========================================================================== */
+
+// 1. Initialize Google Translate
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr', // Only load English and French
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+// 2. Load the Google API Script dynamically
+(function() {
+    var gtScript = document.createElement('script');
+    gtScript.type = 'text/javascript';
+    gtScript.async = true;
+    gtScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.getElementsByTagName('head')[0].appendChild(gtScript);
+})();
+
+// 3. Handle Custom Button Click
+document.addEventListener('DOMContentLoaded', function() {
+    const translateBtn = document.getElementById('translateBtn');
+    
+    // Check if user already selected French previously
+    if (getCookie('googtrans') === '/en/fr') {
+        translateBtn.textContent = "EN";
+        translateBtn.classList.add('active-lang');
+    }
+
+    if (translateBtn) {
+        translateBtn.addEventListener('click', function() {
+            const googleSelect = document.querySelector(".goog-te-combo");
+            
+            if (googleSelect) {
+                // Determine current state based on button text
+                const currentLang = translateBtn.textContent;
+
+                if (currentLang === "FR") {
+                    // Switch to French
+                    googleSelect.value = "fr";
+                    translateBtn.textContent = "EN"; // Change button to allow switching back
+                    translateBtn.classList.add('active-lang');
+                } else {
+                    // Switch back to English
+                    googleSelect.value = "en";
+                    translateBtn.textContent = "FR";
+                    translateBtn.classList.remove('active-lang');
+                }
+
+                // Trigger the change event on the hidden Google dropdown
+                googleSelect.dispatchEvent(new Event('change'));
+            }
+        });
+    }
+});
+
+// Helper function to read cookies (for keeping language state)
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
     // ---------------------------------------------------------
     // SEARCH LOADER
@@ -234,6 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function initWeatherWidget() {
         let weatherData = null;
         let locationData = null;
+        /*
         try {
             const location = await getUserLocation();
             if (location) {
@@ -244,9 +311,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             console.error('Error initializing weather widget:', error);
-        } finally {
-            updateWeatherWidget(weatherData, locationData);
-        }
+        }*/
+        updateWeatherWidget(weatherData, locationData);
+      
     }
 
     initWeatherWidget();
@@ -327,11 +394,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         updateCarousel();
         
-        let autoScroll = setInterval(next, 3500);
+        let autoScroll = setInterval(next, 2500);
         
         const resetInterval = () => {
             clearInterval(autoScroll);
-            autoScroll = setInterval(next, 3500);
+            autoScroll = setInterval(next, 2500);
         };
         
         if(prevBtn) {
@@ -390,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         carousel.addEventListener('mouseleave', () => {
-            autoScroll = setInterval(next, 3000);
+            autoScroll = setInterval(next, 2500);
         });
         
         document.addEventListener('keydown', e => {
