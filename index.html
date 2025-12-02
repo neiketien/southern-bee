@@ -27,14 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>
-   window.addEventListener('load', function() {
-    var preloadLink = document.getElementById('preloadStyle');
-    preloadLink.rel = 'stylesheet';
-  });
-  </script>
-  <!--<link rel="preload" href="assets/js/script.js" as="script">-->
-  <link href="https://fonts.cdnfonts.com/css/trueno-2" rel="stylesheet">
+  <!--<link href="https://fonts.cdnfonts.com/css/trueno-2&display=swap" rel="stylesheet">-->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,18 +59,15 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
   </script>-->
-  <script src="/assets/js/cookie-consent.js" defer></script>
-    <meta name="monetag" content="15035a23f84ca7e27b10035a642cdcc9">
+  <!-- Preload the Hero Image -->
+  <link rel="preload" as="image" href="https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2025/11/30/2b0b1c87-ef77-441b-99ab-7768adcf414a_ac9bdb1e.jpg?itok=k3Dl8mYH&v=1764501931">
 </head>
 <body>
-    <!-- Overlay for when menu is open -->
 <div class="overlay" id="overlay"></div>
-
-<!-- Navigation Menu -->
 <nav class="nav-menu" id="navMenu">
   <div class="menu-header">
     <div class="menu-logo">
-      <img src="assets/img/logo-img.jpg" alt="Southern Bee">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="250" height="100">
     </div>
     <div class="logo-icon">
       <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
@@ -102,10 +92,9 @@
     <li><a href="#">Politics</a></li>
     <li><a href="#">Economy</a></li>
     <li><a href="#">Tech</a></li>
-    <!--<li><a href="lifestyle.html">Lifestyle</a></li>-->
-    <li><a href="energy.html">Energy</a></li>
-    <!--<li><a href="sports.html">Sports</a></li>-->    
-    <!-- Southern+ submenu is kept but disabled -->
+    <!--<li><a href="#">Lifestyle</a></li>-->
+    <li><a href="#">Energy</a></li>
+    <!--<li><a href="#">Sports</a></li>-->    
     <li class="menu-item-with-submenu disabled-submenu">
       <a href="#">Southern+</a>
       <ul class="submenu">
@@ -117,7 +106,6 @@
   </ul>
 </nav>
   
-<!-- Top navigation bar -->
 <nav class="top-nav">
   <div class="mobile-nav-left">
     <div class="logo-icon mobile-only">
@@ -128,13 +116,15 @@
         <div class="bar bar--3"></div>
       </label>
     </div>
-    <!-- Logo moved inside mobile-nav-left -->
     <a href="index.html" class="logo">
-      <img src="assets/img/logo-img.jpg" alt="The Bee">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="201" height="75">
     </a>
   </div>
   
+ 
   <div class="nav-right">
+    <button id="translateBtn" class="lang-btn">FR</button>
+    <div id="google_translate_element" style="display:none;"></div>
     <div class="vertical-line"></div>
     <div class="search-bar">
       <input type="text" placeholder="Search..." class="search-input">
@@ -148,17 +138,16 @@
   </div>
 </nav>
 
-<!-- Desktop/Tablet Navigation Bar -->
 <div class="desktop-nav-container">
   <nav class="desktop-nav">
     <ul class="main-menu">
       <li><a href="#">Latest</a></li>
       <li><a href="#">Economy</a></li>
       <li><a href="#">Energy</a></li>
-      <!--<li><a href="lifestyle.html">Lifestyle</a></li>-->
+      <!--<li><a href="#">Lifestyle</a></li>-->
       <li><a href="#">Politics</a></li>
       <li><a href="#">Tech</a></li>
-      <!--<li><a href="sports.html">Sports</a></li>-->
+      <!--<li><a href="#">Sports</a></li>-->
       <li class="more-menu disabled-submenu">
         <a href="#">Southern+</a>
         <div class="dropdown-arrow">›</div>
@@ -176,14 +165,12 @@
   </nav>
 </div>
 
-<!-- Bottom header with date -->
 <header class="bottom-header">
   <div class="date-info">
     <div class="day" id="currentDay"></div>
     <div class="datetime" id="currentDateTime"></div>
   </div>
 
-  <!-- Weather Widget -->
   <div class="weather-container">
     <div class="weather-info">
       <span class="weather-text"></span>
@@ -238,24 +225,18 @@
   </div>
 </header>
 
-<!-- Main content area -->
   <div class="page-container">
-        <!-- Header Section -->
         <div class="header-section">
             <h1>Top Story</h1>
             <div class="divider"></div>
         </div>
-
-        <!-- Main Content (Top Story + Sidebar on Desktop) -->
         <div class="main-content">
-            <!-- Main Article Section (Holds Top Story) -->
             <div class="article-container">
-                <!-- Top Story -->
                 <div class="top-story-article-card">
                     <div class="top-story-article">
-                        <img src="https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2025/11/30/2b0b1c87-ef77-441b-99ab-7768adcf414a_ac9bdb1e.jpg?itok=k3Dl8mYH&v=1764501931" alt="Football stadium with smoke and crowd" />
+                        <img src="https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/canvas/2025/11/30/2b0b1c87-ef77-441b-99ab-7768adcf414a_ac9bdb1e.jpg?itok=k3Dl8mYH&v=1764501931" alt="" fetchpriority="high" width="800" height="600"/>
                         <div class="top-story-article-content">
-                            <div class="top-story-article-title">
+p                            <div class="top-story-article-title">
                                 <a href="#">Death toll in Hong Kong fire rises to 146</a>
                             </div>
                             <div class="top-story-excerpt">
@@ -269,7 +250,6 @@
                     </div>
                 </div>
 
-                <!-- Latest News Mobile (HIDDEN ON DESKTOP) -->
                 <div class="mobile-latest-news">
                     <div class="header-section">
                         <a href="#"><h1>Latest News ›</h1></a>
@@ -278,25 +258,23 @@
                     <div class="divider"></div>
 
                     <div class="mobile-latest-news-card">
-                        <img src="https://mf.b37mrtl.ru/files/2025.11/m/692c302385f5405a7a660feb.jpg" alt="News Thumbnail"/>
+                        <img src="https://mf.b37mrtl.ru/files/2025.11/m/692c302385f5405a7a660feb.jpg" alt="News Thumbnail" loading="lazy" width="211" height="119"/>
                         <div class="mobile-latest-news-card-content">
                             <div class="mobile-latest-news-meta">
                                 <span class="mobile-latest-news-card-content-category">Politics</span>
                                 <span class="mobile-latest-news-card-content-date">November 30, 2025</span>
                             </div>
                             <div class="title">
-                                <a href="#">“Kill everybody” US Secretary of War slams media over report on deadly Caribbean strike</a>
+                                <a href="">“Kill everybody” US Secretary of War slams media over report on deadly Caribbean strike</a>
                             </div>
                             <div class="excerpt">US Secretary of War Pete Hegseth has lambasted the Washington Post after it alleged that he had ordered military units to “kill everybody” on a suspected drug-trafficking boat in the Caribbean in early September.</div>
                         </div>
                     </div>
 
-<!-- <div class="divider"></div> -->
-
                     <div class="divider"></div>
 
                     <div class="mobile-latest-news-card">
-                        <img src="https://mf.b37mrtl.ru/files/2025.11/m/692b9105203027261c2dd171.jpg" alt="News Thumbnail"/>
+                        <img src="https://mf.b37mrtl.ru/files/2025.11/m/692b9105203027261c2dd171.jpg" alt="News Thumbnail" loading="lazy" width="211" height="119"/>
                         <div class="mobile-latest-news-card-content">
                             <div class="mobile-latest-news-meta">
                                 <span class="mobile-latest-news-card-content-category">Politics</span>
@@ -311,26 +289,18 @@
 
                     <div class="divider"></div>
 
-                    <!-- REPLACE <div class="ad-unit">...</div> WITH THIS: -->
-
-<div class="mobile-latest-news-card promoted-native-ad">
-    <!-- 1. The Sponsored Tag (Positioned via CSS to sit above the ad title)
-    <span class="mobile-latest-news-card-content-category sponsored-label">Sponsored</span>-->
-
-    <!-- 2. The Adsterra Native Script Container -->
-    <!-- Ideally, configure your Adsterra Native Banner to be 100% width with a transparent background -->
-    <div class="adsterra-native-wrapper">
-        <div id="container-fcc513ac444d2a7229ccf9dd3f97db86"></div>
-        <!-- Paste your Adsterra script tag here -->
-        <script async="async" data-cfasync="false" src="//inspiredcataloguehometown.com/fcc513ac444d2a7229ccf9dd3f97db86/invoke.js"></script>
-    </div>
-</div>
+                    <div class="mobile-latest-news-card promoted-native-ad">
+                        <div class="adsterra-native-wrapper">
+                            <div id="container-fcc513ac444d2a7229ccf9dd3f97db86"></div>
+                            <script async="async" data-cfasync="false" src="//inspiredcataloguehometown.com/fcc513ac444d2a7229ccf9dd3f97db86/invoke.js"></script>
+                        </div>
+                    </div>
 
 
                     <div class="divider"></div>
 
                     <div class="mobile-latest-news-card">
-                        <img src="https://dims.apnews.com/dims4/default/9151f75/2147483647/strip/true/crop/8169x5446+0+0/resize/1198x798!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F3b%2F84%2Fba7a49ead7f3a3c638794c73a243%2F98ab183f21d3423f87940ff5c05712c3" alt="News Thumbnail"/>
+                        <img src="https://dims.apnews.com/dims4/default/9151f75/2147483647/strip/true/crop/8169x5446+0+0/resize/1198x798!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F3b%2F84%2Fba7a49ead7f3a3c638794c73a243%2F98ab183f21d3423f87940ff5c05712c3" alt="News Thumbnail" loading="lazy" width="211" height="119"/>
                         <div class="mobile-latest-news-card-content">
                             <div class="mobile-latest-news-meta">
                                 <span class="mobile-latest-news-card-content-category">Politics</span>
@@ -349,19 +319,12 @@
                 </div>
             </div>
 
-            <!-- Sidebar (Appears next to Top Story on Desktop) -->
             <div class="sidebar">
-                <!-- REPLACE <div class="ad-unit">...</div> WITH THIS: -->
+                <div class="mobile-latest-news-card promoted-native-ad">
+    <!--<span class="mobile-latest-news-card-content-category sponsored-label">Sponsored</span>-->
 
-<div class="mobile-latest-news-card promoted-native-ad">
-    <!-- 1. The Sponsored Tag (Positioned via CSS to sit above the ad title) -->
-    <span class="mobile-latest-news-card-content-category sponsored-label">Sponsored</span>
-
-    <!-- 2. The Adsterra Native Script Container -->
-    <!-- Ideally, configure your Adsterra Native Banner to be 100% width with a transparent background -->
     <div class="adsterra-native-wrapper">
         <div id="container-YOUR_ADSTERRA_DIV_ID"></div>
-        <!-- Paste your Adsterra script tag here -->
         <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
     </div>
 </div>
@@ -394,31 +357,24 @@
                         </div>
                     </div>
                 </div>
+                <!-- Sidebar Display Ad -->
                 <div class="adsterra-native-sidebar-ad">
-                    <!-- Adsterra typically provides a div with an ID and a script. Replace with your actual Adsterra code. -->
-                    <!-- Example Placeholder Structure: -->
                     <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID_HERE">
-                        <!-- Adsterra script will populate this -->
                     </div>
                     <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ADSTERRA_ZONE_ID/invoke.js"></script>
-                    <!-- End Example Placeholder -->
                 </div>
-                <!-- END: NEW ADSTERRA NATIVE AD FOR DESKTOP/TABLET -->
-            
             </div>
         </div> <!-- End of main-content -->
-       
       
       <div class="header-section">
-            <h1>Most Read</h1>
-            <div class="divider"></div>
-        </div>
+          <h1>Most Read</h1>
+          <div class="divider"></div>
+      </div>
             
-            <div class="carousel-container">
-    <div class="carousel">
-      <!-- News Item 1 -->
-      <div class="carousel-item">
-        <img src="https://mf.b37mrtl.ru/files/2025.11/m/69299cb585f5400e4f7532c7.jpg" alt="News image 1" class="carousel-image">
+      <div class="carousel-container">
+          <div class="carousel">
+              <div class="carousel-item">
+                  <img src="https://mf.b37mrtl.ru/files/2025.11/m/69299cb585f5400e4f7532c7.jpg" alt="News image 1" class="carousel-image" loading="lazy" width="800" height="600">
         <div class="carousel-content">
           <span class="carousel-category">Politics</span>
           <div class="carousel-date">November 30, 2025</div>
@@ -426,29 +382,28 @@
         </div>
       </div>
       
-      <!-- REPLACE YOUR AD SPACE CAROUSEL ITEM WITH THIS: -->
-
-<div class="carousel-item adsterra-carousel-item">
-    <!-- 1. The Adsterra Script Wrapper -->
-    <div class="adsterra-carousel-wrapper">
-        <!-- Replace 'container-...' and the 'src' with your actual Adsterra code -->
-        <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID"></div>
-        <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-    </div>
-
-    <!-- 2. The Visual Overlay (Gradient + Sponsored Tag) -->
-    <!-- Pointer-events: none ensures clicks pass through this layer to the ad link below -->
-    <div class="carousel-content ad-overlay-layer">
-        <span class="carousel-category">Sponsored</span>
-        <div class="carousel-date">Promoted Content</div>
-        <!-- The Headline is missing here because the Adsterra script above provides it. 
-             CSS will move the script's title to appear right here. -->
-    </div>
-</div>
-      
-      <!-- News Item 2 -->
       <div class="carousel-item">
-        <img src="https://www.aljazeera.com/wp-content/uploads/2025/11/AP25333259286340-1764510903.jpg?resize=730%2C410&quality=80" alt="News image 2" class="carousel-image">
+        <img src="https://mf.b37mrtl.ru/files/2025.11/m/69299cb585f5400e4f7532c7.jpg" alt="News image 1" class="carousel-image" loading="lazy" width="800" height="600">
+        <div class="carousel-content">
+          <span class="carousel-category">Politics</span>
+          <div class="carousel-date">November 30, 2025</div>
+          <h2 class="carousel-headline">Maduro tells Venezuelan air force to ‘be ready’ amid Trump threats</h2>
+        </div>
+      </div>
+      
+      <div class="carousel-item adsterra-carousel-item">
+          <div class="adsterra-carousel-wrapper">
+              <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID"></div>
+              <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+          </div>
+          <div class="carousel-content ad-overlay-layer">
+              <!--<span class="carousel-category">Sponsored</span>
+              <div class="carousel-date">Promoted Content</div>-->
+          </div>
+      </div>
+      
+      <div class="carousel-item">
+        <img src="https://www.aljazeera.com/wp-content/uploads/2025/11/AP25333259286340-1764510903.jpg?resize=730%2C410&quality=80" alt="News image 2" class="carousel-image" loading="lazy" width="800" height="600">
         <div class="carousel-content">
           <span class="carousel-category">Politics</span>
           <div class="carousel-date">November 30, 2025</div>
@@ -456,29 +411,8 @@
         </div>
       </div>
       
-      <!-- REPLACE YOUR AD SPACE CAROUSEL ITEM WITH THIS: -->
-
-<div class="carousel-item adsterra-carousel-item">
-    <!-- 1. The Adsterra Script Wrapper -->
-    <div class="adsterra-carousel-wrapper">
-        <!-- Replace 'container-...' and the 'src' with your actual Adsterra code -->
-        <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID"></div>
-        <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-    </div>
-
-    <!-- 2. The Visual Overlay (Gradient + Sponsored Tag) -->
-    <!-- Pointer-events: none ensures clicks pass through this layer to the ad link below -->
-    <div class="carousel-content ad-overlay-layer">
-        <span class="carousel-category">Sponsored</span>
-        <div class="carousel-date">Promoted Content</div>
-        <!-- The Headline is missing here because the Adsterra script above provides it. 
-             CSS will move the script's title to appear right here. -->
-    </div>
-</div>
-      
-      <!-- News Item 3 -->
       <div class="carousel-item">
-        <img src="https://www.aljazeera.com/wp-content/uploads/2025/11/afp_692c3bd9d7bf-1764506585.jpg?resize=770%2C513&quality=80" alt="News image 3" class="carousel-image">
+        <img src="https://www.aljazeera.com/wp-content/uploads/2025/11/afp_692c3bd9d7bf-1764506585.jpg?resize=770%2C513&quality=80" alt="News image 3" class="carousel-image" loading="lazy" width="800" height="600">
         <div class="carousel-content">
           <span class="carousel-category">Politics</span>
           <div class="carousel-date">November 30, 2025</div>
@@ -486,29 +420,28 @@
         </div>
       </div>
       
-      <!-- REPLACE YOUR AD SPACE CAROUSEL ITEM WITH THIS: -->
-
-<div class="carousel-item adsterra-carousel-item">
-    <!-- 1. The Adsterra Script Wrapper -->
-    <div class="adsterra-carousel-wrapper">
-        <!-- Replace 'container-...' and the 'src' with your actual Adsterra code -->
-        <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID"></div>
-        <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-    </div>
-
-    <!-- 2. The Visual Overlay (Gradient + Sponsored Tag) -->
-    <!-- Pointer-events: none ensures clicks pass through this layer to the ad link below -->
-    <div class="carousel-content ad-overlay-layer">
-        <span class="carousel-category">Sponsored</span>
-        <div class="carousel-date">Promoted Content</div>
-        <!-- The Headline is missing here because the Adsterra script above provides it. 
-             CSS will move the script's title to appear right here. -->
-    </div>
-</div>
+      <div class="carousel-item adsterra-carousel-item">
+          <div class="adsterra-carousel-wrapper">
+              <div id="container-YOUR_ADSTERRA_NATIVE_AD_ID"></div>
+              <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+           </div>
+           <div class="carousel-content ad-overlay-layer">
+               <!--<span class="carousel-category">Sponsored</span>
+               <div class="carousel-date">Promoted Content</div>-->
+           </div>
+      </div>
       
-      <!-- News Item 4 -->
       <div class="carousel-item">
-        <img src="https://assets.korearisk.com/uploads/2025/11/Aviation-Day-2025-001_Featured-image_KCNA-20251130-1255x670.png" alt="News image 4" class="carousel-image">
+        <img src="https://www.aljazeera.com/wp-content/uploads/2025/11/afp_692c3bd9d7bf-1764506585.jpg?resize=770%2C513&quality=80" alt="News image 3" class="carousel-image" loading="lazy" width="800" height="600">
+        <div class="carousel-content">
+          <span class="carousel-category">Politics</span>
+          <div class="carousel-date">November 30, 2025</div>
+          <h2 class="carousel-headline">Indonesia floods death toll rises to 442 as people hunt for food and water</h2>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <img src="https://assets.korearisk.com/uploads/2025/11/Aviation-Day-2025-001_Featured-image_KCNA-20251130-1255x670.png" alt="News image 4" class="carousel-image" loading="lazy" width="800" height="600">
         <div class="carousel-content">
           <span class="carousel-category">Politics</span>
           <div class="carousel-date">November 29, 2025</div>
@@ -518,8 +451,8 @@
     </div>
     
     <div class="carousel-controls">
-      <button class="carousel-button prev">←</button>
-      <button class="carousel-button next">→</button>
+      <button class="carousel-button prev">‹</button>
+      <button class="carousel-button next">›</button>
     </div>
     
     <div class="carousel-indicators">
@@ -530,464 +463,388 @@
       <span class="indicator" data-index="4"></span>
       <span class="indicator" data-index="5"></span>
       <span class="indicator" data-index="6"></span>
+      <span class="indicator" data-index="7"></span>
     </div>
   </div>
   
   <div class="header-section">
-            <h1>Trending Tags</h1>
-            <div class="divider"></div>
-        </div>
-            
-            <div class="pill-container">
-            <button class="pill active" data-category="economy">Economy</button>
-            <button class="pill" data-category="tech">Tech</button>
-             <button class="pill" data-category="politics">Politics</button>
-            <button class="pill" data-category="energy">Energy</button>
-            <!--<button class="pill" data-category="sports">Sports</button>
-            <button class="pill" data-category="lifestyle">Lifestyle</button>-->
-        </div>
-        
-        <!-- ... Trending Tags Pills Container ... -->
-
-<!-- CORRECTED ECONOMY SECTION -->
-<!-- Note: Only ONE parent div has id="economy" and class="featured-content-section" -->
-<div id="economy" class="featured-content-section active">
-    
-    <!-- Article 1 -->
-    <div class="featured-article-card">
+      <h1>Trending</h1>
+      <div class="divider"></div>
+  </div>
+  
+  <div class="pill-container">
+      <button class="pill active" data-category="economy">Economy</button>
+      <button class="pill" data-category="tech">Tech</button>
+      <button class="pill" data-category="politics">Politics</button>
+      <button class="pill" data-category="energy">Energy</button>
+      <!--<button class="pill" data-category="sports">Sports</button>
+      <button class="pill" data-category="lifestyle">Lifestyle</button>-->
+  </div>
+  
+  <div id="economy" class="featured-content-section active">
+      <div class="featured-article-card">
         <div class="featured-article">
-            <img src="https://media.tehrantimes.com/d/t/2025/11/30/4/5802007.jpg?ts=1764491385615" alt="News Image" />
-            <div class="featured-article-meta">
-                <span class="category">Economy</span>
-                <span class="date">November 30, 2025</span>
+            <img src="https://media.tehrantimes.com/d/t/2025/11/30/4/5802007.jpg?ts=1764491385615" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Economy</span>
+                    <span class="date">November 30, 2025</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">Iran’s non-oil trade reaches $76.5b in 8 months</a>
+                </div>
+                <p class="featured-article-excerpt">Iran’s foreign trade reached 131.054 million tons worth $76.537 billion in the first eight months of the current Iranian calendar year (March 21-November 22), according to data from the Islamic Republic of Iran Customs Administration (IRICA).</p>
             </div>
-            <div class="featured-article-title">
-                <a href="#" class="">Iran’s non-oil trade reaches $76.5b in 8 months</a>
-            </div>
-            <p class="featured-article-excerpt">Iran’s foreign trade reached 131.054 million tons worth $76.537 billion in the first eight months of the current Iranian calendar year (March 21-November 22), according to data from the Islamic Republic of Iran Customs Administration (IRICA).</p>
         </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Article 2 (Removed id="economy" from here) -->
     <div class="featured-article-card">
         <div class="featured-article">
-            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/d172bc00-99d1-43ea-b6bc-b21896eca44c_d0d88502.jpg?itok=JuO8pJTT&v=1764515045" alt="News Image" />
-            <div class="featured-article-meta">
-                <span class="category">Economy</span>
-                <span class="date">November 30, 2025</span>
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/d172bc00-99d1-43ea-b6bc-b21896eca44c_d0d88502.jpg?itok=JuO8pJTT&v=1764515045" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Economy</span>
+                    <span class="date">November 30, 2025</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">India’s Modi plans to pitch arms deal to Russia</a>
+                </div>
+                <p class="featured-article-excerpt">The Indian leader has maintained India’s long-standing ties to Moscow despite reducing its reliance on Russian weapons by acquiring more arms from the US and Europe.</p>
             </div>
-            <div class="featured-article-title">
-                <a href="#" class="">India’s Modi plans to pitch arms deal to Russia, Putin despite US efforts</a>
-            </div>
-            <p class="featured-article-excerpt">
-                The Indian leader has maintained India’s long-standing ties to Moscow despite reducing its reliance on Russian weapons by acquiring more arms from the US and Europe.
-            </p>
         </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- REPLACE <div class="ad-unit"> IN TRENDING TAGS WITH THIS: -->
-
-<div class="featured-article-card promoted-featured-ad">
-    <div class="featured-article">
-        <!-- 1. Adsterra Script Wrapper -->
-        <div class="adsterra-native-featured-wrapper">
-            <!-- Replace with your actual Adsterra code -->
-            <div id="container-YOUR_ADSTERRA_TRENDING_ID"></div>
-            <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+    <div class="featured-article-card promoted-featured-ad">
+        <div class="featured-article">
+            <div class="adsterra-native-featured-wrapper">
+                <div id="container-YOUR_ADSTERRA_TRENDING_ID"></div>
+                <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+            </div>
+            <div class="featured-article-meta static-sponsored-meta">
+                <!--<span class="category">Sponsored</span>-->
+            </div>
         </div>
+    </div>
 
-        <!-- 2. The Sponsored Tag (Visually positioned via CSS) -->
-        <div class="featured-article-meta static-sponsored-meta">
-            <span class="category">Sponsored</span>
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/0cecad90-0e9e-4254-8443-8efa8e556f21_81c5396a.jpg?itok=gy6_jtmp&v=1764495167" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Economy</span>
+                    <span class="date">Nov 30</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">Kazakhstan tells Ukraine to stop Black Sea oil terminal attacks</a>
+                </div>
+                <p class="featured-article-excerpt">Ukraine has mounted wave after wave of attacks on Russia’s oil refineries and crude oil terminals in an attempt to undermine the Russian war economy.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/26/b0e6aa15-29e5-40db-9351-38b66e09831a_6e8d884d.jpg?itok=quOo4-0U&v=1764151195" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Economy</span>
+                    <span class="date">Nov 27</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">Chinese tourism to Russia soars as travellers pivot</a>
+                </div>
+                <p class="featured-article-excerpt">Chinese travel firms have seen a surge in Russia-related bookings in recent weeks, as tourists continue to avoid Japan amid a diplomatic row.</p>
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="divider"></div>
-
-    <!-- Article 3 (Removed id="economy" from here) -->
-    <div class="featured-article-card">
-        <div class="featured-article">
-            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/0cecad90-0e9e-4254-8443-8efa8e556f21_81c5396a.jpg?itok=gy6_jtmp&v=1764495167" alt="News Image" />
-            <div class="featured-article-meta">
-                <span class="category">Economy</span>
-                <span class="date">November 30, 2025</span>
-            </div>
-            <div class="featured-article-title">
-                <a href="#" class="">Kazakhstan tells Ukraine to stop Black Sea oil terminal attacks</a>
-            </div>
-            <p class="featured-article-excerpt">
-                Ukraine has mounted wave after wave of attacks on Russia’s oil refineries and crude oil terminals in an attempt to undermine the Russian war economy.
-            </p>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Article 4 (Removed id="economy" from here) -->
-    <div class="featured-article-card">
-        <div class="featured-article">
-            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/26/b0e6aa15-29e5-40db-9351-38b66e09831a_6e8d884d.jpg?itok=quOo4-0U&v=1764151195" alt="News Image" />
-            <div class="featured-article-meta">
-                <span class="category">Economy</span>
-                <span class="date">November 27, 2025</span>
-            </div>
-            <div class="featured-article-title">
-                <a href="#" class="">Chinese tourism to Russia soars as travellers pivot from under-fire Japan</a>
-            </div>
-            <p class="featured-article-excerpt">
-                Chinese travel firms have seen a surge in Russia-related bookings in recent weeks, as tourists continue to avoid Japan amid a diplomatic row.
-            </p>
-        </div>
-    </div>
-</div> 
-<!-- END of Economy Section -->
-
-<!-- Next section (Tech) starts here... -->
 <div id="tech" class="featured-content-section">
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/fd8c0fe6-d0ee-438b-824f-03b47bf5c587_f0dc713b.jpg?itok=pwRZ_UDP&v=1764506933" alt="" />
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/fd8c0fe6-d0ee-438b-824f-03b47bf5c587_f0dc713b.jpg?itok=pwRZ_UDP&v=1764506933" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
                     <span class="category">Technology</span>
                     <span class="date">November 30, 2025</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">China’s Xingyan ‘Star Eye’ network to track satellites and space debris</a>
+                    <a href="#">China’s Xingyan ‘Star Eye’ network to track satellites</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    The web of 156 orbiting sensors will form the country’s second space situational awareness constellation designed to bring down the risk of collisions.
-                </p>
-              </div>
+                <p class="featured-article-excerpt">The web of 156 orbiting sensors will form the country’s second space situational awareness constellation designed to bring down the risk of collisions.</p>
             </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2020/08/university-education-in-Nigeria-2.jpg" alt="" />
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2020/08/university-education-in-Nigeria-2.jpg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
                     <span class="category">Technology</span>
                     <span class="date">November 29, 2025</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">Google plans to spend $2m to redraw Nigeria’s approach to teaching AI</a>
+                    <a href="#">Google plans to spend $2m to redraw Nigeria’s approach to teaching AI</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    Google plans to commit $2.08 million to five Nigerian organisations to accelerate advanced AI skilling, push innovation and strengthen digital safety over the next three years.
-                </p>
-              </div>
+                <p class="featured-article-excerpt">Google plans to commit $2.08 million to five Nigerian organisations to accelerate advanced AI skilling, push innovation and strengthen digital safety over the next three years.</p>
             </div>
-            
-            <div class="divider"></div>
-            
-            <!-- REPLACE <div class="ad-unit"> IN TRENDING TAGS WITH THIS: -->
-
-<div class="featured-article-card promoted-featured-ad">
-    <div class="featured-article">
-        <!-- 1. Adsterra Script Wrapper -->
-        <div class="adsterra-native-featured-wrapper">
-            <!-- Replace with your actual Adsterra code -->
-            <div id="container-YOUR_ADSTERRA_TRENDING_ID"></div>
-            <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-        </div>
-
-        <!-- 2. The Sponsored Tag (Visually positioned via CSS) -->
-        <div class="featured-article-meta static-sponsored-meta">
-            <span class="category">Sponsored</span>
         </div>
     </div>
-</div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/28/fcebca0c-57a8-4872-a0df-b872bebd2e71_0c1b2f5c.jpg?itok=sda6wSWe&v=1764333022" alt="" />
+
+    <div class="featured-article-card promoted-featured-ad">
+        <div class="featured-article">
+            <div class="adsterra-native-featured-wrapper">
+                <div id="container-YOUR_ADSTERRA_TECH_ID"></div>
+            </div>
+            <div class="featured-article-meta static-sponsored-meta">
+                <!--<span class="category">Sponsored</span>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/28/fcebca0c-57a8-4872-a0df-b872bebd2e71_0c1b2f5c.jpg?itok=sda6wSWe&v=1764333022" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
                     <span class="category">Technology</span>
-                    <span class="date">November 29, 2025</span>
+                    <span class="date">Nov 29</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">DeepSeek releases first open AI model with gold-level scores at maths olympiad</a>
+                    <a href="#">DeepSeek releases first open AI model with gold-level scores</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    Chinese artificial intelligence company DeepSeek has released the world’s first open AI model to test and score a gold medal-level performance at the annual International Mathematical Olympiad (IMO).
-                </p>
-              </div>
+                <p class="featured-article-excerpt">Chinese artificial intelligence company DeepSeek has released the world’s first open AI model to test and score a gold medal-level performance at the annual International Mathematical Olympiad (IMO).</p>
             </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/28/83e013e1-8cf5-4777-ba41-d0bb5df89b55_ea3989ef.jpg?itok=gHEjs0QP&v=1764302248" alt="" />
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/28/83e013e1-8cf5-4777-ba41-d0bb5df89b55_ea3989ef.jpg?itok=gHEjs0QP&v=1764302248" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
                     <span class="category">Technology</span>
-                    <span class="date">November 28, 2025</span>
+                    <span class="date">Nov 28</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">Across the Global South, tech firms double down on AI despite bubble fears</a>
+                    <a href="#">Tech firms double down on AI despite bubble fears</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    Despite fears over the artificial intelligence bubble bursting linger in global markets, tech firms from South Africa to Nigeria continue to press on with AI products.
-
-                </p>
-              </div>
+                <p class="featured-article-excerpt">Despite fears over the artificial intelligence bubble bursting linger in global markets, tech firms from South Africa to Nigeria continue to press on with AI products.</p>
             </div>
-        </div>
-        
-        <div id="politics" class="featured-content-section">
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://mf.b37mrtl.ru/files/2025.11/m/692ae5ba2030276a6f1721e2.jpg" alt="" />
-                <div class="featured-article-meta">
-                    <span class="category">Politics</span>
-                    <span class="date">November 30, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">China-US trade war yields unprecedented Asian partnership</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    Thailand’s relationship with China has entered a new and symbolically powerful phase with King Maha Vajiralongkorn’s historic five-day state visit to Beijing in mid-November – the first by a reigning Thai monarch since the establishment of diplomatic relations fifty years ago.
-                </p>
-              </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/26c817cf-b5b6-44da-bb46-64eeb84b8894_8fe6d0f9.jpg?itok=5CWIKhjN&v=1764493129" alt="" />
-                <div class="featured-article-meta">
-                    <span class="category">Politics</span>
-                    <span class="date">November 30, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">Flood death tolls rise in Indonesia, Sri Lanka as aid trickles in</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    Flooding has killed hundreds in both countries and displaced thousands, as damaged roads and downed power lines hamper rescue efforts.
-                </p>
-              </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <!-- REPLACE <div class="ad-unit"> IN TRENDING TAGS WITH THIS: -->
-
-<div class="featured-article-card promoted-featured-ad">
-    <div class="featured-article">
-        <!-- 1. Adsterra Script Wrapper -->
-        <div class="adsterra-native-featured-wrapper">
-            <!-- Replace with your actual Adsterra code -->
-            <div id="container-YOUR_ADSTERRA_TRENDING_ID"></div>
-            <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-        </div>
-
-        <!-- 2. The Sponsored Tag (Visually positioned via CSS) -->
-        <div class="featured-article-meta static-sponsored-meta">
-            <span class="category">Sponsored</span>
         </div>
     </div>
 </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/1898cb68-b619-448b-b61c-6f0b98842bed_2e210fe9.jpg?itok=PCYn_W3H&v=1764507096" alt=" " />
+
+<div id="politics" class="featured-content-section">
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://mf.b37mrtl.ru/files/2025.11/m/692ae5ba2030276a6f1721e2.jpg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
                     <span class="category">Politics</span>
                     <span class="date">November 30, 2025</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">Pakistan rejects UN warning over legal immunity for military chief</a>
+                    <a href="#">China-US trade war yields unprecedented Asian partnership</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    A constitutional amendment approved by parliament earlier this month shields Field Marshal Syed Asim Munir and other top officials from prosecution for life.
-                </p>
-              </div>
+                <p class="featured-article-excerpt">Thailand’s relationship with China has entered a new and symbolically powerful phase with King Maha Vajiralongkorn’s historic five-day state visit to Beijing in mid-November – the first by a reigning Thai monarch since the establishment of diplomatic relations fifty years ago.</p>
             </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/1397701-1.jpg" alt="" />
-                <div class="featured-article-meta">
-                    <span class="category">Politics</span>
-                    <span class="date">, November 28, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">Burkina Faso Approves Nuclear Cooperation Agreement with Russia</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    Burkina Faso’s Parliament has given the green light to a landmark agreement with Russia aimed at strengthening cooperation in the field of civil nuclear energy.
-                </p>
-              </div>
-            </div>
-        </div>
-        
-        <div id="energy" class="featured-content-section">
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/1397701-1.jpg" alt="" />
-                <div class="featured-article-meta">
-                    <span class="category">Energy</span>
-                    <span class="date">November 28, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">Burkina Faso Approves Nuclear Cooperation Agreement with Russia</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    Burkina Faso’s Parliament has given the green light to a landmark agreement with Russia aimed at strengthening cooperation in the field of civil nuclear energy.
-                </p>
-              </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://tribuneonlineng.com/wp-content/webp-express/webp-images/uploads/2025/05/AfDB-1.png.webp" alt=" " />
-                <div class="featured-article-meta">
-                    <span class="category">Energy</span>
-                    <span class="date">November 28, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">AfDB approves $500m loan for Nigeria’s energy transition reforms</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    The African Development Bank (AfDB) Group has approved a $500 million loan to Nigeria to finance the second phase of its Economic Governance and Energy Transition Support Programme.
-                </p>
-              </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <!-- REPLACE <div class="ad-unit"> IN TRENDING TAGS WITH THIS: -->
-
-<div class="featured-article-card promoted-featured-ad">
-    <div class="featured-article">
-        <!-- 1. Adsterra Script Wrapper -->
-        <div class="adsterra-native-featured-wrapper">
-            <!-- Replace with your actual Adsterra code -->
-            <div id="container-YOUR_ADSTERRA_TRENDING_ID"></div>
-            <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
-        </div>
-
-        <!-- 2. The Sponsored Tag (Visually positioned via CSS) -->
-        <div class="featured-article-meta static-sponsored-meta">
-            <span class="category">Sponsored</span>
         </div>
     </div>
-</div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://img2.chinadaily.com.cn/images/202511/30/692c03f1a310d68600f33d06.jpeg" alt=" " />
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/26c817cf-b5b6-44da-bb46-64eeb84b8894_8fe6d0f9.jpg?itok=5CWIKhjN&v=1764493129" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
                 <div class="featured-article-meta">
-                    <span class="category">Energy</span>
+                    <span class="category">Politics</span>
                     <span class="date">November 30, 2025</span>
                 </div>
                 <div class="featured-article-title">
-                    <a href="#" class="">China commissions new gas pipeline to benefit Xinjiang region</a>
+                    <a href="#">Flood death tolls rise in Indonesia, Sri Lanka as aid trickles in</a>
                 </div>
-                <p class="featured-article-excerpt">
-                    A 378-kilometer pipeline was commissioned in the Xinjiang Uygur autonomous region to ease gas shortages in five counties and cities in southern Xinjiang.
-                </p>
-              </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="featured-article-card">
-            <div class="featured-article">
-                <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/IMG_5873.jpeg" alt=" " />
-                <div class="featured-article-meta">
-                    <span class="category">Energy</span>
-                    <span class="date">November 29, 2025</span>
-                </div>
-                <div class="featured-article-title">
-                    <a href="#" class="">West African Resources Proposes Alternative Plan as Burkina Faso Seeks Larger Stake in Kiaka Mine</a>
-                </div>
-                <p class="featured-article-excerpt">
-                    West African Resources has submitted an alternative proposal to the government of Burkina Faso after authorities requested a larger stake in the Kiaka Gold Mine, one of the country’s most significant new gold operations.
-                </p>
-              </div>
+                <p class="featured-article-excerpt">Flooding has killed hundreds in both countries and displaced thousands, as damaged roads and downed power lines hamper rescue efforts.</p>
             </div>
         </div>
-        
-        
-            
-        
-        <div class="header-section">
-               <a href="opinion-analysis.html"><h1>Opinion and Analysis ›</h1></a>
-           </div>
-            
-            <div class="divider"></div>
-            
-            
-            <div class="article-card">
-                                <div class="article-meta">
-                    <span class="category">Opinion</span>
-                    <span class="date">November 29, 2025</span>
-                </div>
-                <div class="article-title">
-                    <a href="#">Venezuela: Another US invasion based on lies and deceit?</a>
-                </div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <!-- REPLACE <div class="ad-unit"> IN OPINION SECTION WITH THIS: -->
-
-<div class="article-card promoted-opinion-ad">
-    <!-- 1. Static Sponsored Meta (Stacked on top) -->
-    <div class="article-meta">
-        <span class="category">Sponsored</span>
     </div>
 
-    <!-- 2. Adsterra Script Wrapper -->
-    <div class="article-title adsterra-opinion-wrapper">
-        <!-- Replace with your actual Adsterra code -->
-        <div id="container-YOUR_ADSTERRA_OPINION_ID"></div>
-        <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+    <div class="featured-article-card promoted-featured-ad">
+        <div class="featured-article">
+            <div class="adsterra-native-featured-wrapper">
+                <div id="container-YOUR_ADSTERRA_POLITICS_ID"></div>
+            </div>
+            <div class="featured-article-meta static-sponsored-meta">
+                <!--<span class="category">Sponsored</span>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/11/30/1898cb68-b619-448b-b61c-6f0b98842bed_2e210fe9.jpg?itok=PCYn_W3H&v=1764507096" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Politics</span>
+                    <span class="date">Nov 30</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">Pakistan rejects UN warning over legal immunity for military chief</a>
+                </div>
+                <p class="featured-article-excerpt">A constitutional amendment approved by parliament earlier this month shields Field Marshal Syed Asim Munir and other top officials from prosecution for life.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/1397701-1.jpg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Politics</span>
+                    <span class="date">Nov 28</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">Burkina Faso Approves Nuclear Cooperation Agreement with Russia</a>
+                </div>
+                <p class="featured-article-excerpt">Burkina Faso’s Parliament has given the green light to a landmark agreement with Russia aimed at strengthening cooperation in the field of civil nuclear energy.</p>
+            </div>
+        </div>
     </div>
 </div>
-                    
-                  <div class="divider"></div>              
-                      
-            <div class="article-card">
-                <div class="article-meta">
-                    <span class="category">Analysis</span>
+
+<div id="energy" class="featured-content-section">
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/1397701-1.jpg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Energy</span>
                     <span class="date">November 28, 2025</span>
                 </div>
-                <div class="article-title">
-                    <a href="#">Guinea-Bissau coup: What happened, why it matters, what happens next?</a>
-                </div>             
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="article-card">
-                <div class="article-meta">
-                    <span class="category">Opinion</span>
-                    <span class="date">November 25, 2025</span>
+                <div class="featured-article-title">
+                    <a href="#">Burkina Faso Approves Nuclear Cooperation Agreement with Russia</a>
                 </div>
-                <div class="article-title">
-                    <a href="#">No, there is no ceasefire in Gaza</a>
-               </div>
+                <p class="featured-article-excerpt">Burkina Faso’s Parliament has given the green light to a landmark agreement with Russia aimed at strengthening cooperation in the field of civil nuclear energy.</p>
             </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://tribuneonlineng.com/wp-content/webp-express/webp-images/uploads/2025/05/AfDB-1.png.webp" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Energy</span>
+                    <span class="date">November 28, 2025</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">AfDB approves $500m loan for Nigeria’s energy transition reforms</a>
+                </div>
+                <p class="featured-article-excerpt">The African Development Bank (AfDB) Group has approved a $500 million loan to Nigeria to finance the second phase of its Economic Governance and Energy Transition Support Programme.</p>
             </div>
-          
+        </div>
+    </div>
+
+    <div class="featured-article-card promoted-featured-ad">
+        <div class="featured-article">
+            <div class="adsterra-native-featured-wrapper">
+                <div id="container-YOUR_ADSTERRA_ENERGY_ID"></div>
+            </div>
+            <div class="featured-article-meta static-sponsored-meta">
+                <!--<span class="category">Sponsored</span>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://img2.chinadaily.com.cn/images/202511/30/692c03f1a310d68600f33d06.jpeg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Energy</span>
+                    <span class="date">Nov 30</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">China commissions new gas pipeline to benefit Xinjiang</a>
+                </div>
+                <p class="featured-article-excerpt">A 378-kilometer pipeline was commissioned in the Xinjiang Uygur autonomous region to ease gas shortages in five counties and cities in southern Xinjiang.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-article-card">
+        <div class="featured-article">
+            <img src="https://westafricaweekly.com/wp-content/uploads/2025/11/IMG_5873.jpeg" alt="News Image" loading="lazy"/>
+            <div class="featured-article-content">
+                <div class="featured-article-meta">
+                    <span class="category">Energy</span>
+                    <span class="date">Nov 29</span>
+                </div>
+                <div class="featured-article-title">
+                    <a href="#">West African Resources Proposes Alternative Plan as Burkina Faso Seeks Larger Stake in Kiaka Mine</a>
+                </div>
+                <p class="featured-article-excerpt">West African Resources has submitted an alternative proposal to the government of Burkina Faso after authorities requested a larger stake in the Kiaka Gold Mine, one of the country’s most significant new gold operations.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-section">
+    <a href="#"><h1>Opinion and Analysis ›</h1></a>
+</div>
+
+<div class="divider"></div>
+<div class="opinion-grid-container"> 
+    <div class="article-card">
+        <div class="article-content-wrapper">
+            <div class="article-meta">
+                <span class="category">Opinion</span>
+                <span class="date">November 29, 2025</span>
+            </div>
+            <div class="article-title">
+                <a href="#">Venezuela: Another US invasion based on lies and deceit?</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-card promoted-opinion-ad">
+        <div class="article-content-wrapper">
+            <div class="article-meta">
+                <!--<span class="category">Sponsored</span>-->
+            </div>
+            <div class="article-title adsterra-opinion-wrapper">
+                 <div id="container-YOUR_ADSTERRA_OPINION_ID"></div>
+                 <script async="async" data-cfasync="false" src="//plXXXXXX.highcpmrevenuegate.com/YOUR_ID/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+    
+    <div class="article-card">
+        <div class="article-content-wrapper">
+            <div class="article-meta">
+                <span class="category">Analysis</span>
+                <span class="date">Nov 28</span>
+            </div>
+            <div class="article-title">
+                <a href="#">Guinea-Bissau coup: What happened, why it matters?</a>
+            </div>             
+        </div>
+    </div>
+
+    <div class="article-card">
+        <div class="article-content-wrapper">
+            <div class="article-meta">
+                <span class="category">Opinion</span>
+                <span class="date">Nov 25</span>
+            </div>
+            <div class="article-title">
+                <a href="#">No, there is no ceasefire in Gaza</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
  
  <footer>
         <div class="footer-brand">Southern Bee</div>
@@ -1023,7 +880,6 @@
         </div>
     </footer>
     
-    <!-- START OF LOADER HTML -->
     <div id="loading-screen" style="display: none;">
         <div class="loader-container">
             <div class="loader-flex"></div>
@@ -1035,12 +891,9 @@
        </div>
     </div>
     
-    <!-- Cookie Popup -->
 <div class="cookie-card" id="cookiePopup">
   <span class="title">🍪 This website uses cookies</span>
   <p class="description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic.</p>
-  
-  <!-- Cookie preferences section (initially hidden) -->
   <div class="cookie-preferences" id="cookiePreferences">
     <div class="preference-item">
       <div class="preference-text">
@@ -1094,6 +947,6 @@
   <!-- Content will be set by JavaScript -->
 </div>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/script.js" defer></script>
 </body>
 </html>
