@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Southern Bee | Admin Dashboard</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>   
+    <div class="dashboard">
+    <header class="dashboard-header">
+      <div class="header-container">
+        <div class="logo">The Bee</div>
+        
+        <nav class="header-nav">
+          <ul class="nav-links">
+            <li><a href="admin-dashboard.html" class="nav-link active">Dashboard</a></li>
+            <li><a href="manage-articles.html" class="nav-link">Articles</a></li>
+            <li><a href="analytics.html" class="nav-link">Analytics</a></li>
+            <li><a href="#" class="nav-link">Users</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" placeholder="Search...">
+          </div>
+
+          <button class="icon-button">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </button>
+
+          <div class="user-menu">
+            <div class="user-avatar">EG</div>
+            <div class="user-dropdown">
+                            <div class="user-details">
+                  <div class="small-user-avatar">EG</div>
+                  <div class="user-component">
+                      <b>Essie Grey</b>
+                      <p>essie.grey@southern-bee.com</p>
+                  </div>
+              </div>
+              <div class="dropdown-separator"></div>
+              <a href="analytics.html" class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/>
+                </svg>
+                Analytics
+              </a>
+              <a href="manage-articles.html" class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/>
+                </svg>
+                Articles
+              </a>
+              <div class="dropdown-separator"></div>
+              <a href="profile.html" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Settings
+              </a>
+              <div class="dropdown-separator"></div>
+              <a href="" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" x2="9" y1="12" y2="12"></line>
+                </svg>
+                Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="page-header">
+        <h1 class="header-greeting" id="header-greeting">Good morning, <span>Essie</span></h1>
+        <p class="page-description">Here’s what’s happening with your content today</p>
+      </div>
+
+      <a href="create-article.html" class="create-button">
+    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="12" x2="12" y1="5" y2="19"></line>
+      <line x1="5" x2="19" y1="12" y2="12"></line>
+    </svg>
+    Create New Article
+</a>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-title">Published Articles</div>
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+              <polyline points="14,2 14,8 20,8"></polyline>
+            </svg>
+          </div>
+          <div class="stat-value">33</div>
+          <div class="stat-change positive">
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+            +12% from last month
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-title">In Review</div>
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="stat-value">0</div>
+          <div class="stat-change">
+            No pending reviews
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-title">Draft Articles</div>
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+            </svg>
+          </div>
+          <div class="stat-value">15</div>
+          <div class="stat-change">
+            Ready to publish
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <div class="stat-title">Monthly Views</div>
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <div class="stat-value">24.2K</div>
+          <div class="stat-change positive">
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+            +8.3% from last month
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Recent Activity</h2>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <td><span class="badge draft">Draft</span></td>
+                  <td>China's meteoric rise and inspiration for the Global South</td>
+                  <td>Opinion</td>
+                  <td>May 1, 2025</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-primary">Publish</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="badge draft">Draft</span></td>
+                  <td>Ex-DR Congo Leader Stripped of Immunity</td>
+                  <td>Politics</td>
+                  <td>April 30, 2025</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-primary">Publish</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="badge published">Published</span></td>
+                  <td>DR Congo: A fragile truce amid imperialist exploitation</td>
+                  <td>Opinion</td>
+                  <td>May 1, 2025</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">View</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="badge published">Published</span></td>
+                  <td>IMF Chief Suggests Argentinians Should Vote for LLA</td>
+                  <td>Politics</td>
+                  <td>April 30, 2025</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">View</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Team Activity</h2>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Recent Article</th>
+                  <th>Last Activity</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="status-dot online"></span>
+                      <span class="user-name">Essie Grey</span>
+                    </div>
+                  </td>
+                  <td>China's meteoric rise and inspiration for the Global South</td>
+                  <td>2 hours ago</td>
+                  <td>Admin</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">View Profile</button>
+                      <button class="button button-sm button-secondary">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <!--<tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="status-dot offline"></span>
+                      <span class="user-name">Editorial Team</span>
+                    </div>
+                  </td>
+                  <td>DR Congo: A fragile truce amid imperialist exploitation</td>
+                  <td>Yesterday</td>
+                  <td>Editor</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">View Profile</button>
+                      <button class="button button-sm button-secondary">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                        <span class="status-dot online"></span>
+                      <span class="user-name">Rowena Ivie</span>
+                    </div>
+                  </td>
+                  <td>IMF Chief Suggests Argentinians Should Vote for LLA</td>
+                  <td>30 minutes ago</td>
+                  <td>Editor</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">View Profile</button>
+                      <button class="button button-sm button-secondary">Message</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <span class="status-dot online"></span>
+                      <span class="user-name">Isolde  Vela</span>
+                    </div>
+                  </td>
+                  <td>Ex-DR Congo Leader Stripped of Immunity</td>
+                  <td>4 hours ago</td>
+                  <td>Writer</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">View Profile</button>
+                      <button class="button button-sm button-secondary">Message</button>
+                    </div>
+                  </td>
+                </tr>-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Team Management</h2>
+          <button class="button button-lg button-outline">Add new user</button>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                      <div class="user-cell">
+                      <span class="status-dot online"></span>
+                      <span class="user-name">Essie Grey</span>
+                    </div>
+                  </td>
+                  <td>essie.grey@southern-bee.com</td>
+                  <td>Admin</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">Reset Password</button>
+                      <button class="button button-sm button-destructive">Deactivate</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      <div class="user-cell">
+                      <span class="status-dot offline"></span>
+                      <span class="user-name">Editorial Team</span>
+                    </div>
+                  </td>
+                  <td>editorial@southern-bee.com</td>
+                  <td>Editor</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">Reset Password</button>
+                      <button class="button button-sm button-success">Reactivate</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      <div class="user-cell">
+                      <span class="status-dot offline"></span>
+                      <span class="user-name">Rowena Ivie</span>
+                    </div>
+                  </td>
+                  <td>rowena.ivie@southern-bee.com</td>
+                  <td>Editor</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">Reset Password</button>
+                      <button class="button button-sm button-success">Reactivate</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      <div class="user-cell">
+                      <span class="status-dot offline"></span>
+                      <span class="user-name">Isolde Vela</span>
+                    </div>
+                  </td>
+                  <td>isolde.vela@southern-bee.com</td>
+                  <td>Writer</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button button-sm button-outline">Edit</button>
+                      <button class="button button-sm button-secondary">Reset Password</button>
+                      <button class="button button-sm button-success">Reactivate</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      © 2025 Southern Bee. All rights reserved.
+    </footer>
+  </div>
+    
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

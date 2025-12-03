@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sign Up | Southern Bee Admin</title>
+  <meta name="description" content="Create an account for Southern Bee Admin Dashboard">
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="logo">The Bee</div>
+    <div class="auth-header">
+        <h1 class="auth-title">Create Account</h1>
+        <p class="auth-subtitle">Get started by creating your admin account.</p>
+    </div>
+    <!-- IMPORTANT: id="signupForm" and novalidate added here -->
+    <form id="signupForm" action="admin-login.html" novalidate>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" class="form-input" placeholder="John Doe">
+        <div class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="john.doe@southern-bee.com">
+        <div class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••">
+        <div class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" class="form-input" placeholder="••••••••">
+        <div class="error-message"></div>
+      </div>
+      <button type="submit" class="auth-button">Sign Up</button>
+    </form>
+    <a href="admin-login.html" class="auth-link">Already have an account? Log In</a>
+  </div>
+  <footer class="footer">
+      © 2025 Southern Bee. All rights reserved.
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

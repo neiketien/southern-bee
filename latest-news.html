@@ -60,18 +60,14 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
   </script>-->
-  <script src="/assets/js/cookie-consent.js" defer></script>
 </head>
 <body>
     
-     <!-- Overlay for when menu is open -->
 <div class="overlay" id="overlay"></div>
-
-<!-- Navigation Menu -->
 <nav class="nav-menu" id="navMenu">
   <div class="menu-header">
     <div class="menu-logo">
-      <img src="assets/img/logo-img.jpg" alt="Southern Bee">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="250" height="100">
     </div>
     <div class="logo-icon">
       <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
@@ -99,7 +95,6 @@
     <!--<li><a href="#">Lifestyle</a></li>-->
     <li><a href="#">Energy</a></li>
     <!--<li><a href="#">Sports</a></li>-->
-    <!-- Southern+ submenu is disabled -->
     <li class="menu-item-with-submenu disabled-submenu">
       <a href="#">Southern+</a>
       <ul class="submenu">
@@ -111,7 +106,6 @@
   </ul>
 </nav>
   
-<!-- Top navigation bar -->
 <nav class="top-nav">
   <div class="mobile-nav-left">
     <div class="logo-icon mobile-only">
@@ -122,13 +116,14 @@
         <div class="bar bar--3"></div>
       </label>
     </div>
-    <!-- Logo moved inside mobile-nav-left -->
-    <div class="logo">
-      <img src="assets/img/logo-img.jpg" alt="The Bee">
-    </div>
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="201" height="75">
+    </a>
   </div>
   
   <div class="nav-right">
+    <button id="translateBtn" class="lang-btn">FR</button>
+    <div id="google_translate_element" style="display:none;"></div>
     <div class="vertical-line"></div>
     <div class="search-bar">
       <input type="text" placeholder="Search..." class="search-input">
@@ -142,7 +137,6 @@
   </div>
 </nav>
 
-<!-- Desktop/Tablet Navigation Bar -->
 <div class="desktop-nav-container">
   <nav class="desktop-nav">
     <ul class="main-menu">
@@ -170,14 +164,11 @@
   </nav>
 </div>
 
-  <!-- Bottom header with date -->
 <header class="bottom-header">
   <div class="date-info">
     <div class="day" id="currentDay"></div>
     <div class="datetime" id="currentDateTime"></div>
   </div>
-
-    <!-- Weather Widget -->
     <div class="weather-container">
       <div class="weather-info">
         <span class="weather-text"></span>
@@ -232,7 +223,6 @@
     </div>
 </header>
 
-  <!-- Main content area -->
   <div class="page-container">
     <div class="header-section">
         <h1>Latest News</h1>
@@ -241,7 +231,6 @@
     
     <div class="alt-news-content-area">
         <main class="news-article-list">
-            <!-- News Card 1 -->
             <div class="alt-news-card">
                 <img src="your-image.jpg" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
@@ -257,7 +246,6 @@
             </div>
             <div class="divider news-item-divider"></div>
             
-            <!-- News Card 2 -->
             <div class="alt-news-card">
                 <img src="your-image.jpg" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
@@ -273,7 +261,6 @@
             </div>
             <div class="divider news-item-divider"></div>
 
-            <!-- News Card 3 -->
             <div class="alt-news-card">
                 <img src="your-image.jpg" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
@@ -289,7 +276,6 @@
             </div>
             <div class="divider news-item-divider"></div>
             
-            <!-- News Card 4 -->
             <div class="alt-news-card">
                 <img src="your-image.jpg" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
@@ -305,7 +291,21 @@
             </div>
             <div class="divider news-item-divider"></div>
             
-            <!-- News Card 5 -->
+            <div class="alt-news-card">
+                <img src="your-image.jpg" alt="News Thumbnail"/>
+                <div class="alt-news-card-content">
+                    <div class="alt-news-meta">
+                        <span class="category">Politics</span>
+                        <span class="date">April 12, 2025</span>
+                    </div>
+                    <div class="title">
+                        <a href="#">India’s Election Commission defends EVMs amid U.S. criticism</a>
+                    </div>
+                    <div class="excerpt">ECI has defended its “tamper-proof” electronic system following criticism...</div>
+                </div>
+            </div>
+            <div class="divider news-item-divider"></div>
+            
             <div class="alt-news-card">
                 <img src="your-image.jpg" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
@@ -321,90 +321,73 @@
             </div>
             <div class="divider news-item-divider"></div>
 
-            <!-- News Card 6 -->
             <div class="alt-news-card">
-                <img src="your-image.jpg" alt="News Thumbnail"/>
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
                 <div class="alt-news-card-content">
                     <div class="alt-news-meta">
                         <span class="category">Politics</span>
                         <span class="date">April 12, 2025</span>
                     </div>
                     <div class="title">
-                        <a href="#">India’s Election Commission defends EVMs amid U.S. criticism</a>
+                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
                     </div>
-                    <div class="excerpt">ECI has defended its “tamper-proof” electronic system following criticism...</div>
+                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
+                </div>  
+            </div>
+            <div class="divider news-item-divider"></div>
+
+            <div class="alt-news-card">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
+                <div class="alt-news-card-content">
+                    <div class="alt-news-meta">
+                        <span class="category">Politics</span>
+                        <span class="date">April 12, 2025</span>
+                    </div>
+                    <div class="title">
+                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
+                    </div>
+                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
+                </div>  
+            </div>
+            <div class="divider news-item-divider"></div>
+            
+            <div class="alt-news-card">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
+                <div class="alt-news-card-content">
+                    <div class="alt-news-meta">
+                        <span class="category">Politics</span>
+                        <span class="date">April 12, 2025</span>
+                    </div>
+                    <div class="title">
+                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
+                    </div>
+                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
+                </div>  
+            </div>
+            <div class="divider news-item-divider"></div>
+
+            <div class="alt-news-card">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
+                <div class="alt-news-card-content">
+                    <div class="alt-news-meta">
+                        <span class="category">Politics</span>
+                        <span class="date">April 12, 2025</span>
+                    </div>
+                    <div class="title">
+                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
+                    </div>
+                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
+                </div>  
+            </div>
+            
+            <div class="divider news-item-divider"></div>
+            <div id="infinite-scroll-trigger" class="loader-wrapper">
+                <div class="loader"></div>
                 </div>
-            </div>
-            <div class="divider news-item-divider"></div>
-
-            <!-- News Card 7 -->
-            <div class="alt-news-card">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
-                <div class="alt-news-card-content">
-                    <div class="alt-news-meta">
-                        <span class="category">Politics</span>
-                        <span class="date">April 12, 2025</span>
-                    </div>
-                    <div class="title">
-                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
-                    </div>
-                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
-                </div>  
-            </div>
-            <div class="divider news-item-divider"></div>
-
-            <!-- News Card 8 -->
-            <div class="alt-news-card">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
-                <div class="alt-news-card-content">
-                    <div class="alt-news-meta">
-                        <span class="category">Politics</span>
-                        <span class="date">April 12, 2025</span>
-                    </div>
-                    <div class="title">
-                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
-                    </div>
-                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
-                </div>  
-            </div>
-            <div class="divider news-item-divider"></div>
-            
-            <!-- News Card 9 -->
-            <div class="alt-news-card">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
-                <div class="alt-news-card-content">
-                    <div class="alt-news-meta">
-                        <span class="category">Politics</span>
-                        <span class="date">April 12, 2025</span>
-                    </div>
-                    <div class="title">
-                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
-                    </div>
-                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
-                </div>  
-            </div>
-            <div class="divider news-item-divider"></div>
-            <!-- News Card 9 -->
-            <div class="alt-news-card">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/221001193726-01-indonesia-football-stampede-intl-hnk.jpg?c=16x9&q=h_540,w_960,c_fill" alt="News Thumbnail"/>
-                <div class="alt-news-card-content">
-                    <div class="alt-news-meta">
-                        <span class="category">Politics</span>
-                        <span class="date">April 12, 2025</span>
-                    </div>
-                    <div class="title">
-                        <a href="#">Ecuador’s Presidential Election Deadlock</a>
-                    </div>
-                    <div class="excerpt">Ecuador's presidential election remains too close to call even after February’s...</div>
-                </div>  
-            </div>
-            
-            <div class="divider news-item-divider"></div>
-            <!-- No divider after the last news item in the list in the original HTML -->
+                <p id="end-of-content" class="end-message">You’ve reached the end! We’ll have more news later</p>
         </main>
 
         <aside class="alt-sidebar-ads-list">
-            <!-- Ad Unit 1 -->
             <div class="alt-ad-unit">
                 <div class="alt-ad-tag">ADVERTISEMENT</div>
                 <div class="alt-ad-title">Promoted Content</div>
@@ -412,7 +395,6 @@
                 <button class="alt-ad-button">Learn More</button>
             </div>
             
-            <!-- Ad Unit 2 -->
             <div class="alt-ad-unit">
                 <div class="alt-ad-tag">ADVERTISEMENT</div>
                 <div class="alt-ad-title">Promoted Content</div>
@@ -420,14 +402,13 @@
                 <button class="alt-ad-button">Click Here</button>
             </div>
 
-            <!-- Ad Unit 3 -->
             <div class="alt-ad-unit">
                 <div class="alt-ad-tag">SPONSORED</div>
                 <div class="alt-ad-title">Another Promoted Item</div>
             </div>
         </aside>
     </div>
-</div> <!-- End of page-container -->
+</div>
     
     <footer>
         <div class="footer-brand">Southern Bee</div>
@@ -463,7 +444,6 @@
         </div>
     </footer>
     
-    <!-- START OF LOADER HTML -->
     <div id="loading-screen" style="display: none;">
         <div class="loader-container">
             <div class="loader-flex"></div>
@@ -475,12 +455,10 @@
        </div>
     </div>
     
-    <!-- Cookie Popup -->
 <div class="cookie-card" id="cookiePopup">
   <span class="title">🍪 This website uses cookies</span>
   <p class="description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic.</p>
-  
-  <!-- Cookie preferences section (initially hidden) -->
+
   <div class="cookie-preferences" id="cookiePreferences">
     <div class="preference-item">
       <div class="preference-text">
@@ -530,6 +508,6 @@
   </div>
 </div>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/script.js" defer></script>
 </body>
 </html>

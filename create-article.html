@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Southern Bee | Create Article</title>
+  <meta name="description" content="Create a new article for Southern Bee.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--<script src="https://cdn.tiny.cloud/1/d8lp7p4q21ah47puqajxljl7ch6ke3kjbihro86uvd3penuw/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>-->
+</head>
+<body>   
+    <div class="dashboard">
+    <header class="dashboard-header">
+      <div class="header-container">
+        <div class="logo">The Bee</div>
+        <nav class="header-nav">
+          <ul class="nav-links">
+            <li><a href="admin-dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="manage-articles.html" class="nav-link active">Articles</a></li> 
+            <li><a href="analytics.html" class="nav-link">Analytics</a></li>
+            <li><a href="#" class="nav-link">Users</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="search-container">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" placeholder="Search...">
+          </div>
+
+          <button class="icon-button">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </button>
+
+          <div class="user-menu">
+            <div class="user-avatar">EG</div>
+                <div class="user-dropdown">
+                            <div class="user-details">
+                  <div class="small-user-avatar">EG</div>
+                  <div class="user-component">
+                      <b>Essie Grey</b>
+                      <p>essie.grey@southern-bee.com</p>
+                  </div>
+              </div>
+              <div class="dropdown-separator"></div>
+              <a href="analytics.html" class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/>
+                </svg>
+                Analytics
+              </a>
+              <a href="manage-articles.html" class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/>
+                </svg>
+                Articles
+              </a>
+              <div class="dropdown-separator"></div>
+              <a href="profile.html" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Settings
+              </a>
+              <div class="dropdown-separator"></div>
+              <a href="#" class="dropdown-item">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" x2="9" y1="12" y2="12"></line>
+                </svg>
+                Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="page-header">
+        <h1 class="header-greeting">Create New Article</h1>
+        <p class="page-description">Fill in the details below to compose and publish your new article.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Article Details</h2>
+        </div>
+        <div class="card-body">
+          <form id="create-article-form">
+                        <div class="form-group">
+              <label for="article-title" class="form-label">Article Title</label>
+              <input type="text" id="article-title" name="article-title" class="form-input" placeholder="Enter article title" required>
+              <small id="title-word-count" class="word-count-display">0 / 15 words</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="article-subheading" class="form-label">Article Subheading</label>
+              <input type="text" id="article-subheading" name="article-subheading" class="form-input" placeholder="Enter article subheading" required>
+              <small id="subheading-word-count" class="word-count-display">0 / 30 words</small>
+            </div>
+
+            <div class="form-group">
+              <label for="article-category" class="form-label">Category</label>
+              <select id="article-category" name="article-category" class="form-select" required>
+                <option value="">Select a category...</option>
+                <option value="analysis">Analysis</option>
+                <option value="economy">Economy</option>
+                <option value="energy">Energy</option>
+                <option value="opinion">Opinion</option>
+                <option value="politics">Politics</option>
+                <option value="tech">Tech</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="article-category" class="form-label">Tags</label>
+              <input type="text" id="article-tags" name="article-tags" class="form-input" placeholder="Enter Article Tags" required>
+            </div>
+            
+            <div class="form-group toggle-group">
+                <span class="form-label toggle-label">Top Story</span>
+                <label class="switch">
+                  <input type="checkbox" id="top-story" name="top-story">
+                  <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="form-group">
+              <label for="article-photo" class="form-label">Article Photo</label>
+              <input type="file" id="article-photo" name="article-photo" class="form-input" accept="image/*" required>
+              <small style="color: hsl(var(--muted-foreground)); font-size: 12px;">Supported formats: JPG, PNG, WEBP. Max size: 5MB.</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="article-photo-caption" class="form-label">Article Photo Caption</label>
+              <input type="text" id="article-photo-caption" name="article-photo-caption" class="form-input" placeholder="Enter article photo caption" required>
+              <small id="subheading-word-count" class="word-count-display">0 / 30 words</small>
+            </div>
+
+            <div class="form-group">
+              <label for="article-content" class="form-label">Article Content</label>
+              <textarea id="article-content" name="article-content" placeholder="Write your article here..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" id="preview-button" class="button button-outline">Preview</button>
+              <button type="button" id="save-draft-button" class="button button-secondary">Save Draft</button>
+              <button type="submit" id="publish-button" class="button button-primary">Publish Article</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      © 2025 Southern Bee. All rights reserved.
+    </footer>
+  </div>
+    
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

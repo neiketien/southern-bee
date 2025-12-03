@@ -26,9 +26,6 @@
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--<link rel="preload" href="/assets/css/main.css" as="style">
-  <link rel="preload" href="/assets/js/main.js" as="script">
-  <link rel="stylesheet" href="/assets/css/main.css">-->
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="application/ld+json">
     {
@@ -50,26 +47,21 @@
     }
   </script>
   <link rel="alternate" type="application/rss+xml" title="Southern Bee RSS Feed" href="https://southern-bee.com/feed.xml">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
-  </script>
-  <script src="/assets/js/cookie-consent.js" defer></script>
-  <script src="/assets/js/main.js" defer></script>
+  </script>-->
 </head>
 <body>
 
- <!-- Overlay for when menu is open -->
 <div class="overlay" id="overlay"></div>
-
-<!-- Navigation Menu -->
 <nav class="nav-menu" id="navMenu">
   <div class="menu-header">
     <div class="menu-logo">
-      <img src="assets/img/logo-img.jpg" alt="Southern Bee">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="250" height="100">
     </div>
     <div class="logo-icon">
       <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
@@ -97,7 +89,6 @@
     <li><a href="#">Lifestyle</a></li>
     <li><a href="#">Energy</a></li>
     <li><a href="#">Sports</a></li>
-    <!-- Southern+ submenu is kept but disabled -->
     <li class="menu-item-with-submenu disabled-submenu">
       <a href="#">Southern+</a>
       <ul class="submenu">
@@ -109,7 +100,6 @@
   </ul>
 </nav>
   
-<!-- Top navigation bar -->
 <nav class="top-nav">
   <div class="mobile-nav-left">
     <div class="logo-icon mobile-only">
@@ -120,17 +110,18 @@
         <div class="bar bar--3"></div>
       </label>
     </div>
-    <!-- Logo moved inside mobile-nav-left -->
-    <div class="logo">
-      <img src="assets/img/logo-img.jpg" alt="The Bee">
-    </div>
+    <a class="logo">
+      <img src="assets/img/logo-img.jpg" alt="Southern Bee" width="201" height="75">
+    </a>
   </div>
   
   <div class="nav-right">
+    <button id="translateBtn" class="lang-btn">FR</button>
+    <div id="google_translate_element" style="display:none;"></div>
     <div class="vertical-line"></div>
     <div class="search-bar">
-      <input type="text" placeholder="Search..." class="search-input">
-      <button class="search-button">
+      <input type="text" placeholder="Search..." class="search-input" aria-label="Search for articles">
+      <button class="search-button" aria-label="Submit Search">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -140,7 +131,6 @@
   </div>
 </nav>
 
-<!-- Desktop/Tablet Navigation Bar -->
 <div class="desktop-nav-container">
   <nav class="desktop-nav">
     <ul class="main-menu">
@@ -168,11 +158,10 @@
   </nav>
 </div>
 
-  <!-- Main content area -->
   <div class="container">
         <div class="category-bar">
             <a href="#" class="news-category">Opinion</a>
-            <a href="#" class="news-category">Africa</a>
+            <b class="news-category">Africa</b>
             <b class="news-category">DR Congo</b>
         </div>
         
@@ -322,7 +311,6 @@
         </div>
     </footer>
     
-    <!-- START OF LOADER HTML -->
     <div id="loading-screen" style="display: none;">
         <div class="loader-container">
             <div class="loader-flex"></div>
@@ -334,12 +322,9 @@
        </div>
     </div>
     
-    <!-- Cookie Popup -->
 <div class="cookie-card" id="cookiePopup">
   <span class="title">🍪 This website uses cookies</span>
   <p class="description">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic.</p>
-  
-  <!-- Cookie preferences section (initially hidden) -->
   <div class="cookie-preferences" id="cookiePreferences">
     <div class="preference-item">
       <div class="preference-text">
@@ -389,6 +374,6 @@
   </div>
 </div>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login | Southern Bee Admin</title>
+  <meta name="description" content="Login to Southern Bee Admin Dashboard">
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="logo">The Bee</div>
+    <div class="auth-header">
+        <h1 class="auth-title">Welcome Back!</h1>
+        <p class="auth-subtitle">Enter your credentials to access your account.</p>
+    </div>
+    <form id="loginForm" action="admin-dashboard.html" novalidate>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="you@southern-bee.com">
+        <div class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-input" placeholder="••••••••">
+        <div class="error-message"></div>
+      </div>
+      <button type="submit" class="auth-button">Log In</button>
+    </form>
+    <a href="admin-signup.html" class="auth-link">Don't have an account? Sign Up</a>
+  </div>
+   <footer class="footer">
+      © 2025 Southern Bee. All rights reserved.
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
