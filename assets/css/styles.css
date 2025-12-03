@@ -28,6 +28,9 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    font-style: italic; 
+    vertical-align: middle;
+    content-visibility: auto;
 }
 
 /* 
@@ -94,15 +97,16 @@ img {
 }
 
 .nav-menu ul li {
-    padding: 15px 20px;
+    padding: 18px 25px;
     border-bottom: 1px solid #f0f0f0;
 }
 
 .nav-menu ul li a {
     color: #1a2a3a;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: block;
+    width: 100%;
     font-family: 'Georgia', serif;
     transition: color 0.2s;
 }
