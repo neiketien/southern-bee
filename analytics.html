@@ -7,32 +7,38 @@
   <title>Southern Bee | Analytics</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="assets/css/style.css">
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>-->
+  
   <style>
-      /* Remove the old .google-embed-container styles and use this: */
+    /* MODIFIED: Updated styles to force the iframe to fill the container */
 
-.dashboard-embed-wrapper {
-    width: 100%;
-    /* This makes the iframe tall enough to fit content without internal scrollbars */
-    min-height: 1200px; 
-    position: relative;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
+    .dashboard-embed-wrapper {
+        width: 100%;
+        /* Use 'vh' (viewport height) so it fills 85% of the screen height */
+        height: 85vh; 
+        /* Ensure it never gets too short on mobile devices */
+        min-height: 800px; 
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
 
-.dashboard-embed-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
+    .dashboard-embed-wrapper iframe {
+        /* Absolute position ensures the iframe snaps to the edges of the wrapper */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+    }
 
-/* Make the card body flush to remove ugly white borders */
-.card-body.no-padding {
-    padding: 0;
-}
+    /* Make the card body flush to remove ugly white borders */
+    .card-body.no-padding {
+        padding: 0;
+    }
   </style>
 </head>
 <body>   
@@ -120,33 +126,24 @@
     </header>
 
     <main class="main-container">
-      <div class="page-header" style="display: flex; justify-content: space-between; align-items: end;">
-    <div>
-        <h1 class="page-title">Analytics</h1>
-        <p class="page-description">Real-time data from Google Analytics 4</p>
-    </div>
-    
-    <!-- Button moved here, styled as outline to be less distracting -->
-    <a href="https://analytics.google.com/analytics/web/" target="_blank" class="button button-outline">
-        Open Full GA4 Dashboard ↗
-    </a>
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 15px;">
+        <div>
+            <h1 class="page-title">Analytics</h1>
+            <p class="page-description">Real-time data from Google Analytics 4</p>
+        </div>
+        
+        <a href="https://analytics.google.com/analytics/web/" target="_blank" class="button button-outline">
+            Open Full GA4 Dashboard ↗
+        </a>
       </div>
       
       <div class="card">
-        <!--<div class="card-header">
-          <h3 class="card-title">Performance Overview</h3>
-        </div>-->
         <div class="card-body no-padding">
-        <div class="dashboard-embed-wrapper">
-            <!-- 
-               IMPORTANT URL CHANGES:
-               1. Added /embed/ to the path (you already had this)
-               2. Added params at the end: ?params=%7B%22ds0.refreshInterval%22%3A300%7D&nav=collapsed
-            -->
-            <iframe src="https://lookerstudio.google.com/embed/reporting/353cf5d8-a134-4fc7-9d29-28f35de7e032/page/kIV1C?nav=collapsed" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="dashboard-embed-wrapper">
+                <iframe src="https://lookerstudio.google.com/embed/reporting/353cf5d8-a134-4fc7-9d29-28f35de7e032/page/kIV1C?nav=collapsed" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
         </div>
-    </div>
-  </div>
+      </div>
     </main>
     
     <footer class="footer">
@@ -157,4 +154,3 @@
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
- 
