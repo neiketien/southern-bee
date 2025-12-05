@@ -9,23 +9,30 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>-->
   <style>
-      .google-embed-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 75%; /* Aspect Ratio */
-        overflow: hidden;
-        border-radius: 8px;
-        border: 1px solid #e0e0e0;
-    }
-    .google-embed-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+      /* Remove the old .google-embed-container styles and use this: */
+
+.dashboard-embed-wrapper {
+    width: 100%;
+    /* This makes the iframe tall enough to fit content without internal scrollbars */
+    min-height: 1200px; 
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.dashboard-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Make the card body flush to remove ugly white borders */
+.card-body.no-padding {
+    padding: 0;
+}
   </style>
 </head>
 <body>   
@@ -113,28 +120,39 @@
     </header>
 
     <main class="main-container">
-      <div class="page-header">
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: end;">
+    <div>
         <h1 class="page-title">Analytics</h1>
         <p class="page-description">Real-time data from Google Analytics 4</p>
-        
-        <!-- LINK TO FULL DASHBOARD BUTTON -->
-        <a href="https://analytics.google.com/analytics/web/" target="_blank" class="button button-primary">
-            Open Full GA4 Dashboard ↗
-        </a>
+    </div>
+    
+    <!-- Button moved here, styled as outline to be less distracting -->
+    <a href="https://analytics.google.com/analytics/web/" target="_blank" class="button button-outline">
+        Open Full GA4 Dashboard ↗
+    </a>
       </div>
       
       <div class="card">
-        <div class="card-header">
+        <!--<div class="card-header">
           <h3 class="card-title">Performance Overview</h3>
+        </div>-->
+        <div class="card-body no-padding">
+        <div class="dashboard-embed-wrapper">
+            <!-- 
+               IMPORTANT URL CHANGES:
+               1. Added /embed/ to the path (you already had this)
+               2. Added params at the end: ?params=%7B%22ds0.refreshInterval%22%3A300%7D&nav=collapsed
+            -->
+            <iframe 
+                src="https://lookerstudio.google.com/embed/reporting/353cf5d8-a134-4fc7-9d29-28f35de7e032/page/p_m63q9t54bd?nav=collapsed" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen 
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
         </div>
-        <div class="card-body">
-            <div class="google-embed-container">
-                <!-- REPLACE 'SRC' BELOW WITH YOUR LOOKER STUDIO URL -->
-                <iframe width="600" height="2125" src="https://lookerstudio.google.com/embed/reporting/353cf5d8-a134-4fc7-9d29-28f35de7e032/page/p_m63q9t54bd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-                
-            </div>
-        </div>
-      </div>
+    </div>
+  </div>
     </main>
     
     <footer class="footer">
